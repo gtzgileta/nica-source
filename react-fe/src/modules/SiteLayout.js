@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, withRouter } from "react-router-dom";
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 import "./global.scss";
 
@@ -9,6 +10,7 @@ const LayoutRoute = ({ component: Component, ...rest }) => {
     <React.Fragment>
       <Header />
       <Component {...rest} />
+      <Footer />
     </React.Fragment>
   );
 
