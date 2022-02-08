@@ -5,6 +5,7 @@ import { storeToken } from "../utils/wordpress-util";
 const CONNECTION_SUCCESS = "CONNECTION_SUCCESS";
 const MENU_SUCCESS = "MENU_SUCCESS";
 const HERO_SUCCESS = "HERO_SUCCESS";
+const PODCASTS_SUCCESS = "PODCASTS_SUCCESS";
 const LOADING = "LOADING";
 const ERROR = "ERROR";
 
@@ -75,8 +76,6 @@ export const getHero = () => async (dispatch) => {
       .get("/wp-json/wp/v2/pages/2")
       .catch(() => dispatch({ type: ERROR, payload: `Couldn't get data.` }));
 
-    console.log("res", res);
-
     // GET data
     const found = res.data.acf;
 
@@ -85,6 +84,29 @@ export const getHero = () => async (dispatch) => {
     return true;
   } catch (e) {
     dispatch({ type: ERROR, payload: "Error trying to get hero." });
+    return false;
+  }
+};
+
+export const getPodcasts = () => async (dispatch) => {
+  try {
+    dispatch({ type: LOADING });
+
+    const res = await axios
+      .get("/wp-json/wp/v2/podcasts")
+      .catch(() =>
+        dispatch({ type: ERROR, payload: `Couldn't get podcasts.` })
+      );
+
+    // GET data
+    const found = res.data;
+    console.log("found podcasts", found);
+
+    dispatch({ type: PODCASTS_SUCCESS, payload: found });
+
+    return true;
+  } catch (e) {
+    dispatch({ type: ERROR, payload: "Error trying to get podcasts." });
     return false;
   }
 };
@@ -124,6 +146,13 @@ export const reducer = (state = initialState, action) => {
         ...state,
         loading: false,
         hero: payload,
+        error: null,
+      };
+    case PODCASTS_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        podcasts: payload,
         error: null,
       };
     default:

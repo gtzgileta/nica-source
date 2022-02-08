@@ -1,0 +1,22 @@
+.latest-podcast {
+  display: block;
+
+  .box {
+    background: #fff;
+    position: relative;
+    padding: 50px 40px;
+    border-radius: 20px;
+    top: -50px;
+    box-shadow: 0 13px 35px rgba(0, 0, 0, 0.05);
+    h3 {
+      font-size: 32px;
+      font-weight: 400;
+      color: #111;
+      margin-bottom: 60px;
+
+      .btn-md {
+        float: right;
+      }
+    }
+  }
+}

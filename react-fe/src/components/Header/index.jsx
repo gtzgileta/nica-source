@@ -14,10 +14,18 @@ const Header = () => {
         <div id="logo" style={{ backgroundImage: logo }}></div>
         <ul id="menu">
           {menu.map((item, index) => (
-            <li key={index} onClick={() => history.push(item.url)}>
+            <li
+              key={index}
+              onClick={() => history.push(item.url)}
+              className={index === 0 ? "selected" : ""}
+            >
               {item.title}
             </li>
           ))}
+        </ul>
+        <ul id="menu-buttons">
+          <li className="btn-md btn-primary">Subscribe</li>
+          <li className="btn-md btn-white">Sign-In</li>
         </ul>
       </div>
     </header>

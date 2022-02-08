@@ -1,29 +1,66 @@
 header {
   width: 100%;
-  margin: 30px auto 50px;
+  background: #f8f9fa;
 
   .container {
     display: flex;
-    justify-content: space-between;
   }
 
   #logo {
-    width: 100%;
-    height: 50px;
+    // width: 20%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: flex-start;
+    height: 70px;
+    margin-top: 20px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: left center;
   }
   ul#menu {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    margin-top: 30px;
     li {
       list-style: none;
-      float: left;
       padding: 3px 10px;
       line-height: 36px;
       cursor: pointer;
+      font-size: 14px;
+      &.selected {
+        color: #f13c45;
+        position: relative;
+        &:before {
+          content: "";
+          position: absolute;
+          background: #111;
+          width: 90%;
+          left: 50%;
+          margin-left: -25px;
+          height: 1px;
+          bottom: 20px;
+        }
+      }
       &:hover {
-        text-decoration: underline;
-        color: #bb501c;
+        color: #f13c45;
+      }
+    }
+  }
+  ul#menu-buttons {
+    display: flex;
+    flex-grow: 1;
+    justify-content: end;
+    margin-top: 30px;
+    li {
+      list-style: none;
+      padding: 10px 30px !important;
+      height: 40px;
+      font-size: 13px;
+      cursor: pointer;
+      &:last-child {
+        margin-left: 20px;
       }
     }
   }
