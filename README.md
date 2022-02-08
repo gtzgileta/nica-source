@@ -18,3 +18,7 @@ Wordpress is being used as Headless CMS, following plugins were used for this te
 - React project on `react-fe` (run with `npm run start`)
 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+## Developed by
+
+Oscar Daniel Gutierrez Gileta
