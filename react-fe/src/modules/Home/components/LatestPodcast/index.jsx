@@ -13,6 +13,9 @@ const LatestPodcast = ({ podcasts }) => (
         {podcasts.map((item, index) => (
           <Row key={index} podcast={item} />
         ))}
+        <div className="text-center">
+          <div className="btn-sm btn-white btn-more">Show More Episodes</div>
+        </div>
       </div>
     </div>
   </div>

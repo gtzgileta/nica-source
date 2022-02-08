@@ -8,4 +8,32 @@
     background-repeat: no-repeat;
     background-position: center;
   }
+  .title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .excerpt {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+  .tags {
+    position: relative;
+    span {
+      display: block;
+      font-size: 12px;
+      color: #bbb;
+      margin-bottom: 12px;
+    }
+    @media (min-width: 768px) {
+      &:before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        bottom: -10px;
+        left: -10px;
+        width: 1px;
+        background: #eee;
+      }
+    }
+  }
 }

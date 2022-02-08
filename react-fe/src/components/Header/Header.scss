@@ -51,7 +51,7 @@ header {
   ul#menu-buttons {
     display: flex;
     flex-grow: 1;
-    justify-content: end;
+    justify-content: flex-end;
     margin-top: 30px;
     li {
       list-style: none;

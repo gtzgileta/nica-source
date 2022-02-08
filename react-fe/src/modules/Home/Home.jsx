@@ -7,7 +7,7 @@ import LatestPodcast from "./components/LatestPodcast";
 const HomeLayout = ({ hero, podcasts }) => (
   <React.Fragment>
     {!isLoading(hero) ? <Hero hero={hero} /> : <>Loading...</>}
-    {podcasts.length && <LatestPodcast podcasts={podcasts} />}
+    {!!podcasts.length && <LatestPodcast podcasts={podcasts} />}
   </React.Fragment>
 );
 

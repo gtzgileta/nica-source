@@ -1,7 +1,7 @@
-import core from './core';
+import core from "./core";
 
 const exportables = {
-    core,
+  core,
 };
 
 export default exportables;

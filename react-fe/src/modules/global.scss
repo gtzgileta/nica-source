@@ -543,15 +543,11 @@ html,
 body {
   color: #454c4c;
   overflow-x: hidden;
+  overflow-y: auto;
 }
 
 b {
   font-weight: 700;
-}
-
-body,
-html {
-  overflow-x: hidden;
 }
 
 body {
@@ -876,6 +872,19 @@ p {
   font-weight: 600;
 }
 
+.btn-sm {
+  cursor: pointer;
+  box-sizing: border-box;
+  border-radius: 2px;
+  transition: all 0.2s;
+  outline: none;
+  height: inherit;
+  font-size: 13px;
+  line-height: 14px;
+  padding: 10px 17px;
+  display: inline-block;
+  text-align: center;
+}
 .btn-md {
   cursor: pointer;
   box-sizing: border-box;
@@ -902,4 +911,8 @@ p {
   outline: none;
   color: #f13c45;
   border: 1px solid#F13C45;
+  &:hover {
+    color: #fff;
+    background: #f13c45;
+  }
 }

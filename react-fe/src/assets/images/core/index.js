@@ -1,7 +1,7 @@
-import logo from './logo.png';
+import logo from "./logo.png";
 
 const core = {
-    logo,
+  logo,
 };
 
 export default core;
