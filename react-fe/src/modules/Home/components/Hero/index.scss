@@ -1,0 +1,61 @@
+.hero {
+  display: block;
+  height: 100vh;
+  min-height: 600px;
+  position: relative;
+  padding: 10% 0 25px;
+
+  h1 {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 48px;
+    color: #46496f;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 300 !important;
+    line-height: 28px;
+    max-width: 550px;
+    color: #454c4c;
+  }
+
+  div.h4 {
+    display: inline-block;
+    font-size: 14px;
+    color: #454c4c;
+    &.before,
+    &.after {
+      position: relative;
+      &:before {
+        content: "";
+        height: 1px;
+        position: absolute;
+        top: 5px;
+        left: 0;
+        width: 25px;
+        border-bottom: 1px solid #f13c45;
+      }
+    }
+    &.before {
+      padding-left: 30px;
+    }
+    &.after {
+      padding-right: 30px;
+      &:before {
+        left: inherit;
+        right: 0px;
+      }
+    }
+  }
+
+  .side-image {
+    display: block;
+    padding-bottom: 56.25%;
+    margin-top: 170px;
+    z-index: 2;
+    cursor: pointer;
+    background-position: center;
+    background-size: contain;
+  }
+}
