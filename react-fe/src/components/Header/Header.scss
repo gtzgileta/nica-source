@@ -64,4 +64,32 @@ header {
       }
     }
   }
+
+  @media (max-width: 768px) {
+    .container {
+      display: block;
+      text-align: center;
+    }
+    #logo,
+    ul#menu-buttons,
+    ul#menu {
+      display: block;
+      width: 100%;
+      justify-content: inherit;
+      flex-grow: inherit;
+    }
+    #logo {
+      background-position: center;
+    }
+    ul#menu {
+      li {
+        display: inline-block;
+        &.selected {
+          &:before {
+            content: none;
+          }
+        }
+      }
+    }
+  }
 }

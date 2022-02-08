@@ -36,4 +36,13 @@
       }
     }
   }
+
+  @media (max-width: 768px) {
+    .title,
+    .excerpt,
+    .tags,
+    .btn-sm {
+      margin-top: 20px;
+    }
+  }
 }
